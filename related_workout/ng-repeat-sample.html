@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>ng-repeat-sample</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<body>
+<p ng-repeat="n in [1, 2, 3] track by $index">{{n}}</p>
+<hr>
+<h1 ng-repeat-start="n in [1, 2, 3]">{{n}}</h1>
+<h2>{{n}}</h2>
+<h3 ng-repeat-end>{{n}}</h3>
+<hr>
+<ul>
+    <li ng-repeat="prop in {name: 'Name', year: 10}">
+        {{prop}}
+    </li>
+</ul>
+</body>
+</html>

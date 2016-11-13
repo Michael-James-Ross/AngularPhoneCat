@@ -6,11 +6,10 @@ describe('PhoneCat controllers', function() {
 
     describe('PhoneListCtrl', function(){
 
-        it('should create "phones" model with 3 phones', inject(function($controller) {
-            var scope = {},
-                ctrl = $controller('PhoneListController', { $scope: scope });
+        it('should create "phones" model with 3 phones', inject(function($componentController) {
+            var ctrl = $componentController('phoneList');
 
-            expect(scope.phones.length).toBe(3);
+            expect(ctrl.phones.length).toBe(3);
         }));
     });
 });
